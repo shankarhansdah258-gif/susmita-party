@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Susmita Jii 💫</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:"Trebuchet MS", sans-serif;
+    overflow-x:hidden;
+    background:#ffd6e7;
+}
+
+/* ---------- COMMON ---------- */
+
+.page{
+    min-height:100vh;
+    width:100%;
+    position:relative;
+    display:none;
+    overflow:hidden;
+}
+
+.page.active{
+    display:flex;
+}
+
+/* ---------- PAGE 1 ---------- */
+
+#page1{
+    background:#111;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.open-photo{
+    width:min(92vw,430px);
+    max-height:70vh;
+    object-fit:contain;
+    border-radius:18px;
+    box-shadow:0 0 25px rgba(255,255,255,.35);
+}
+
+.next-area{
+    margin-top:30px;
+    background:#168cff;
+    color:white;
+    padding:16px 32px;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:2px;
+    cursor:pointer;
+    box-shadow:0 0 18px rgba(22,140,255,.7);
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{transform:scale(1.05);}
+}
+
+/* ---------- PAGE 2 ---------- */
+
+#page2{
+    background:linear-gradient(135deg,#ffd4e5,#ffc0da,#ffe1ed);
+    flex-direction:column;
+    align-items:center;
+    padding:55px 15px 80px;
+}
+
+.corner{
+    position:absolute;
+    font-size:42px;
+    z-index:2;
+}
+
+.c1{top:8px;left:8px;}
+.c2{top:8px;right:8px;}
+.c3{bottom:8px;left:8px;}
+.c4{bottom:8px;right:8px;}
+
+.pookie{
+    position:absolute;
+    font-size:42px;
+    animation:dance .8s infinite alternate ease-in-out;
+}
+
+.p1{top:65px;left:12px;}
+.p2{top:65px;right:12px;}
+.p3{bottom:65px;left:12px;}
+.p4{bottom:65px;right:12px;}
+
+@keyframes dance{
+    from{transform:rotate(-8deg) translateY(0);}
+    to{transform:rotate(8deg) translateY(-8px);}
+}
+
+.main-photo{
+    width:min(88vw,430px);
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.birthday-title{
+    margin:18px 0 22px;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    color:#ff3f88;
+    text-shadow:2px 2px white;
+}
+
+.photo-grid{
+    width:100%;
+    max-width:430px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    justify-items:center;
+}
+
+.photo-grid img{
+    width:6cm;
+    height:4cm;
+    max-width:100%;
+    object-fit:cover;
+    border-radius:14px;
+    border:4px solid white;
+    box-shadow:0 5px 15px rgba(0,0,0,.18);
+}
+
+.gift-text{
+    margin:25px 0 15px;
+    color:#ff3f88;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.gifts{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    max-width:420px;
+}
+
+.gift{
+    font-size:58px;
+    cursor:pointer;
+    transition:.25s;
+    filter:drop-shadow(0 5px 5px rgba(0,0,0,.2));
+}
+
+.gift:hover{
+    transform:scale(1.15) rotate(-5deg);
+}
+
+/* ---------- GIFT PAGES ---------- */
+
+.gift-page{
+    min-height:100vh;
+    width:100%;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:25px 18px;
+    text-align:center;
+}
+
+.gift-page.active{
+    display:flex;
+}
+
+.back-btn{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:white;
+    border:0;
+    border-radius:20px;
+    padding:9px 15px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Gift 1 */
+
+#gift1Page{
+    background:linear-gradient(135deg,#ffb6d5,#ffe1ef);
+}
+
+.gift1-photo{
+    width:min(90vw,430px);
+    max-height:70vh;
+    object-fit:contain;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(255,255,255,.8);
+}
+
+/* Gift 2 */
+
+#gift2Page{
+    background:linear-gradient(135deg,#ffe0e8,#ffc1d4);
+}
+
+.cake{
+    font-size:170px;
+    animation:cakeFloat 2s infinite ease-in-out;
+}
+
+@keyframes cakeFloat{
+    50%{transform:translateY(-12px);}
+}
+
+.cake-title{
+    margin-top:20px;
+    color:#ff337c;
+    font-size:30px;
+    font-weight:bold;
+    text-shadow:2px 2px white;
+}
+
+/* Gift 3 */
+
+#gift3Page{
+    background:#f9e5d1;
+    justify-content:flex-start;
+    overflow-y:auto;
+    padding-top:55px;
+}
+
+.wishes-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.20;
+    z-index:0;
+}
+
+.wishes-content{
+    position:relative;
+    z-index:1;
+    width:min(94vw,600px);
+    background:rgba(255,255,255,.88);
+    border-radius:22px;
+    padding:22px;
+    text-align:left;
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
+}
+
+.wishes-heading{
+    text-align:center;
+    color:#b56b00;
+    margin-bottom:18px;
+    font-size:23px;
+}
+
+.wishes-list{
+    list-style:none;
+}
+
+.wishes-list li{
+    margin:12px 0;
+    line-height:1.5;
+    color:#513b2b;
+    font-size:16px;
+}
+
+/* ---------- GIFT 4 ---------- */
+
+#gift4Page{
+    background:
+      radial-gradient(circle at 50% 20%,#25356d,#080b24 65%,#02030e);
+    color:white;
+}
+
+.stars{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;transform:scale(.7);}
+    to{opacity:1;transform:scale(1.4);}
+}
+
+.wish-content{
+    position:relative;
+    z-index:3;
+    max-width:430px;
+}
+
+.wish-text{
+    font-size:26px;
+    line-height:1.55;
+    text-shadow:0 0 12px rgba(255,255,255,.7);
+    margin-bottom:35px;
+}
+
+.make-wish{
+    border:1px solid rgba(255,255,255,.7);
+    background:rgba(255,255,255,.12);
+    color:white;
+    padding:17px 25px;
+    border-radius:35px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(255,255,255,.4);
+    animation:glow 1.7s infinite alternate;
+}
+
+@keyframes glow{
+    from{box-shadow:0 0 10px rgba(255,255,255,.3);}
+    to{box-shadow:0 0 30px rgba(255,255,255,.9);}
+}
+
+.final-message{
+    display:none;
+    font-size:27px;
+    line-height:1.6;
+    margin-top:25px;
+    animation:appear 2s ease;
+}
+
+@keyframes appear{
+    from{opacity:0;transform:scale(.7);}
+    to{opacity:1;transform:scale(1);}
+}
+
+.burst{
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:white;
+    animation:burst 1.5s forwards;
+    z-index:2;
+}
+
+@keyframes burst{
+    0%{
+        transform:translate(0,0) scale(1);
+        opacity:1;
+    }
+    100%{
+        transform:translate(var(--x),var(--y)) scale(0);
+        opacity:0;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:430px){
+    .birthday-title{
+        font-size:26px;
+    }
+
+    .photo-grid img{
+        width:6cm;
+        height:4cm;
+    }
+
+    .wish-text{
+        font-size:23px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- PAGE 1 -->
+<!-- ================================================= -->
+
+<section id="page1" class="page active">
+
+    <!-- CHANGE THIS TO YOUR PHOTO 1 -->
+    <img src="photo1.jpg"
+         class="open-photo"
+         alt="Birthday Photo 1">
+
+    <!-- CHANGE THIS TO YOUR FIRST SONG -->
+    <audio id="introMusic" loop>
+        <source src="song1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="next-area" onclick="openMainPage()">
+        PLEASE TAP NEXT
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- PAGE 2 : MAIN BIRTHDAY PAGE -->
+<!-- ================================================= -->
+
+<section id="page2" class="page">
+
+    <div class="corner c1">🌸🍃</div>
+    <div class="corner c2">🍃🌸</div>
+    <div class="corner c3">🌸🍃</div>
+    <div class="corner c4">🍃🌸</div>
+
+    <div class="pookie p1">🐱💃</div>
+    <div class="pookie p2">🐱🕺</div>
+    <div class="pookie p3">🐱💃</div>
+    <div class="pookie p4">🐱🕺</div>
+
+    <!-- CHANGE THIS TO PHOTO 2 -->
+    <img src="photo2.jpg"
+         class="main-photo"
+         alt="Birthday Photo 2">
+
+    <h1 class="birthday-title">
+        Happy Birthday Dear Susmita Jii 💕✨
+    </h1>
+
+    <!-- SIX PHOTOS -->
+
+    <div class="photo-grid">
+
+        <img src="photo3.jpg" alt="Memory 1">
+        <img src="photo4.jpg" alt="Memory 2">
+        <img src="photo5.jpg" alt="Memory 3">
+        <img src="photo6.jpg" alt="Memory 4">
+        <img src="photo7.jpg" alt="Memory 5">
+        <img src="photo8.jpg" alt="Memory 6">
+
+    </div>
+
+    <div class="gift-text">
+        * Tap on 🎁 to get your 🎁 *
+    </div>
+
+    <div class="gifts">
+
+        <div class="gift" onclick="openGift(1)">🎁</div>
+
+        <div class="gift" onclick="openGift(2)">🎁</div>
+
+        <div class="gift" onclick="openGift(3)">🎁</div>
+
+        <div class="gift" onclick="openGift(4)">🎁</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- GIFT 1 -->
+<!-- ================================================= -->
+
+<section id="gift1Page" class="gift-page">
+
+    <button class="back-btn" onclick="backToMain()">← Back</button>
+
+    <!-- CHANGE THIS TO GIFT 1 PHOTO -->
+    <img src="gift1-photo.jpg"
+         class="gift1-photo"
+         alt="Gift 1">
+
+    <!-- CHANGE SONG -->
+    <audio id="gift1Music" loop>
+        <source src="gift1-song.mp3" type="audio/mpeg">
+    </audio>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- GIFT 2 : CAKE -->
+<!-- ================================================= -->
+
+<section id="gift2Page" class="gift-page">
+
+    <button class="back-btn" onclick="backToMain()">← Back</button>
+
+    <div class="cake">
+        🎂
+    </div>
+
+    <div class="cake-title">
+        Happy Birthday<br>
+        Miss Susmita ji 💫💫
+    </div>
+
+    <!-- CHANGE SONG -->
+    <audio id="gift2Music" loop>
+        <source src="gift2-song.mp3" type="audio/mpeg">
+    </audio>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- GIFT 3 : 13 WISHES -->
+<!-- ================================================= -->
+
+<section id="gift3Page" class="gift-page">
+
+    <button class="back-btn" onclick="backToMain()">← Back</button>
+
+    <!-- CHANGE THIS TO YOUR WISHES BACKGROUND PHOTO -->
+    <img src="wishes-photo.jpg"
+         class="wishes-bg"
+         alt="Background">
+
+    <div class="wishes-content">
+
+        <h2 class="wishes-heading">
+            🙏🏵️ I pray to God 🏵️🙏
+        </h2>
+
+        <ul class="wishes-list">
+
+            <li>
+                1. God🏵️🙏, please always keep you happy and never let your beautiful smile fade. ❤️
+            </li>
+
+            <li>
+                2. God🏵️🙏, please give you good health and keep you safe from every illness.💐
+            </li>
+
+            <li>
+                3. God🏵️🙏, please protect you from every negativity and surround you with good people.
+            </li>
+
+            <li>
+                4. God🏵️🙏, please give you strength whenever life becomes difficult.💐
+            </li>
+
+            <li>
+                5. God🏵️🙏please give you peace of mind and keep your heart free from unnecessary worries. 🌸💐
+            </li>
+
+            <li>
+                6. God🏵️🙏, please keep your family happy, healthy, and together always.💐
+            </li>
+
+            <li>
+                7. God🏵️🙏, please give you the courage to choose what is right for you, even when it's difficult.💐
+            </li>
+
+            <li>
+                8. God🏵️🙏, please bring beautiful opportunities into your life and guide you toward a bright future.💐
+            </li>
+
+            <li>
+                9. God🏵️🙏, please protect you from people who look for their own benefit, and don't truly value you.💐
+            </li>
+
+            <li>
+                10. God🏵️🙏, please give you countless reasons to smile throughout this new year of your life. 💐🫶
+            </li>
+
+            <li>
+                11. God🏵️🙏, please make you stronger than your problems and wiser through every experience.💐
+            </li>
+
+            <li>
+                12. God🏵️🙏, please give you a life full of beautiful memories, laughter, love, and unforgettable moments.💐
+            </li>
+
+            <li>
+                13. 🏵️ And lastly, God, please take special care of you, because you are someone I genuinely wish to see happy. 🙏❤️💐
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- GIFT 4 : MAKE A WISH -->
+<!-- ================================================= -->
+
+<section id="gift4Page" class="gift-page">
+
+    <button class="back-btn" onclick="backToMain()">← Back</button>
+
+    <div class="stars" id="stars"></div>
+
+    <div class="wish-content">
+
+        <div class="wish-text">
+            Close your eyes…<br>
+            Make a wish…<br>
+            Because today, the universe is celebrating YOU. 💫
+        </div>
+
+        <button class="make-wish" onclick="makeWish()">
+            ✨ MAKE MY WISH ✨
+        </button>
+
+        <div class="final-message" id="finalMessage">
+            May every wish you make today find its way to you. 💫
+            <br><br>
+            Happy Birthday, Miss Susmita ji ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* ================================================= */
+/* PAGE SWITCHING */
+/* ================================================= */
+
+function hideAllPages(){
+
+    document.querySelectorAll(".page, .gift-page")
+    .forEach(page => {
+        page.classList.remove("active");
+    });
+
+}
+
+function openMainPage(){
+
+    hideAllPages();
+
+    document.getElementById("page2")
+    .classList.add("active");
+
+    stopAllMusic();
+
+    /* Start main music after user interaction */
+    const music = document.getElementById("introMusic");
+
+    if(music){
+        music.play().catch(()=>{});
+    }
+}
+
+
+/* ================================================= */
+/* GIFTS */
+/* ================================================= */
+
+function openGift(number){
+
+    hideAllPages();
+
+    const page = document.getElementById("gift" + number + "Page");
+
+    if(page){
+        page.classList.add("active");
+    }
+
+    stopAllMusic();
+
+    if(number === 1){
+
+        const music = document.getElementById("gift1Music");
+
+        if(music){
+            music.currentTime = 0;
+            music.play().catch(()=>{});
+        }
+
+    }
+
+    if(number === 2){
+
+        const music = document.getElementById("gift2Music");
+
+        if(music){
+            music.currentTime = 0;
+            music.play().catch(()=>{});
+        }
+
+    }
+
+    if(number === 3){
+
+        /* No music added here yet */
+
+    }
+
+    if(number === 4){
+
+        createStars();
+
+    }
+
+}
+
+
+/* ================================================= */
+/* BACK TO MAIN */
+/* ================================================= */
+
+function backToMain(){
+
+    stopAllMusic();
+
+    hideAllPages();
+
+    document.getElementById("page2")
+    .classList.add("active");
+
+}
+
+
+/* ================================================= */
+/* STOP MUSIC */
+/* ================================================= */
+
+function stopAllMusic(){
+
+    const audios = document.querySelectorAll("audio");
+
+    audios.forEach(audio => {
+
+        audio.pause();
+        audio.currentTime = 0;
+
+    });
+
+}
+
+
+/* ================================================= */
+/* CREATE STARS */
+/* ================================================= */
+
+function createStars(){
+
+    const container =
+        document.getElementById("stars");
+
+    container.innerHTML = "";
+
+    for(let i = 0; i < 100; i++){
+
+        const star =
+            document.createElement("div");
+
+        star.className = "star";
+
+        star.style.left =
+            Math.random() * 100 + "%";
+
+        star.style.top =
+            Math.random() * 100 + "%";
+
+        star.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        container.appendChild(star);
+
+    }
+
+}
+
+
+/* ================================================= */
+/* MAKE MY WISH */
+/* ================================================= */
+
+function makeWish(){
+
+    const button =
+        document.querySelector(".make-wish");
+
+    const message =
+        document.getElementById("finalMessage");
+
+    button.style.display = "none";
+
+    /* Star burst */
+
+    for(let i = 0; i < 80; i++){
+
+        const burst =
+            document.createElement("div");
+
+        burst.className = "burst";
+
+        burst.style.left = "50%";
+        burst.style.top = "50%";
+
+        const angle =
+            Math.random() * Math.PI * 2;
+
+        const distance =
+            100 + Math.random() * 350;
+
+        burst.style.setProperty(
+            "--x",
+            Math.cos(angle) * distance + "px"
+        );
+
+        burst.style.setProperty(
+            "--y",
+            Math.sin(angle) * distance + "px"
+        );
+
+        document.getElementById("gift4Page")
+        .appendChild(burst);
+
+        setTimeout(() => {
+            burst.remove();
+        }, 1600);
+
+    }
+
+    setTimeout(() => {
+
+        message.style.display = "block";
+
+    }, 900);
+
+}
+
+</script>
+
+</body>
+</html>
